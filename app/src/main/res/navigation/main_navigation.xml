@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_navigation"
+    app:startDestination="@id/exploreQuizesFragment">
+
+    <fragment
+        android:id="@+id/exploreQuizesFragment"
+        android:name="com.example.final_exam.fragments.ExploreQuizesFragment"
+        android:label="ExploreQuizesFragment" >
+        <action
+            android:id="@+id/action_exploreQuizesFragment_to_createQuizFragment"
+            app:destination="@id/createQuizFragment" />
+        <action
+            android:id="@+id/action_exploreQuizesFragment_to_playQuizFragment"
+            app:destination="@id/playQuizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.final_exam.fragments.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/createQuizFragment"
+        android:name="com.example.final_exam.fragments.CreateQuizFragment"
+        android:label="CreateQuizFragment" >
+        <action
+            android:id="@+id/action_createQuizFragment_to_exploreQuizesFragment"
+            app:destination="@id/exploreQuizesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playQuizFragment"
+        android:name="com.example.final_exam.fragments.PlayQuizFragment"
+        android:label="PlayQuizFragment" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_playQuizFragment_to_exploreQuizesFragment"
+            app:destination="@id/exploreQuizesFragment" />
+    </fragment>
+
+</navigation>

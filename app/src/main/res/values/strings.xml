@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">final_exam</string>
     <string name="reg_text">Registration</string>
+    <string name="explore_text">Explore</string>
+    <string name="profile_text">Profile</string>
+    <string name="logout_text">Logout</string>
+    <string name="add_question">add question</string>
+    <string name="enter_question_here">enter Question here</string>
+    <string name="possible_answer_1">possible answer 1</string>
+    <string name="possible_answer_2">possible answer 2</string>
+    <string name="possible_answer_3">possible answer 3</string>
+    <string name="submit">Submit</string>
+    <string name="correct">Correct?</string>
+    <string name="enter_quiz_name">enter quiz name</string>
+    <string name="question_count_number">1/%1$s</string>
 </resources>
