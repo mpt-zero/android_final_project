@@ -20,6 +20,7 @@ class LoginActivity : AppCompatActivity() {
     lateinit var userPasswordInput : EditText
     lateinit var loginButton : Button
     lateinit var registerLink : TextView
+    lateinit var changePass : Button
     lateinit var forgotPass : Button
     lateinit var view : View
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +32,7 @@ class LoginActivity : AppCompatActivity() {
         userPasswordInput = findViewById(R.id.userPasswordInput)
         loginButton = findViewById(R.id.loginButton)
         registerLink = findViewById(R.id.register_text)
+        changePass = findViewById(R.id.changePass)
         forgotPass = findViewById(R.id.forgotPass)
         val currentUser = auth.currentUser
         if (currentUser!= null){
@@ -52,8 +54,16 @@ class LoginActivity : AppCompatActivity() {
             builder.show()
         }
 
+        changePass.setOnClickListener {
+            startActivity(Intent(this,ChangePasswordActivity::class.java))
+
+        }
 
     }
+
+
+
+
 
     private fun forgotPassword(currUserEmail : EditText){
         if(currUserEmail.text.toString().isEmpty()){
